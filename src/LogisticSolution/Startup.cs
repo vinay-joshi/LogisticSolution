@@ -23,13 +23,22 @@ namespace LogisticSolution
         {
             app.UseIISPlatformHandler();
 
-            app.UseDefaultFiles();
+            //app.UseDefaultFiles();
             app.UseStaticFiles();
-
             app.UseRuntimeInfoPage();
             app.UseDeveloperExceptionPage();
 
-            app.UseMvcWithDefaultRoute();
+
+            app.UseMvc(route =>
+            {
+                route.MapRoute(
+                   name: "Default",
+                   template: "{controller}/{action}/{id?}",
+                   defaults: new { controller = "Home", action = "Index" }
+                    );
+            });
+
+       
         }
 
         // Entry point for the application.
