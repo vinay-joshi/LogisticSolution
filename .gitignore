@@ -48,3 +48,4 @@ Temporary Items
 
 # Directories for local development
 /src/LogisticSolution/wwwroot/lib
+.vs/config/applicationhost.config
