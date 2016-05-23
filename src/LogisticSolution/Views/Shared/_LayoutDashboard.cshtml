@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/css/dashboard.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="conatiner">
+        <header>
+            <a href="/Dashboard">My Dashboard</a>
+        </header>
+        <nav class="dashboard-nav">
+            <ul>
+                <li class="dashboard-nav-brand">
+                    <a href="/Dashboard" class="visible-sm visible-md visible-lg">Dashboard</a>                   
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="visible-sm visible-md visible-lg">Home</span>
+                        <i class="fa fa-home fa-3"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="visible-sm visible-md visible-lg">Users</span>
+                        <i class="fa fa-universal-access fa-3"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="visible-sm visible-md visible-lg">Vendors</span>
+                        <i class="fa fa-users fa-2"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="conatiner dashboard-body">
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
